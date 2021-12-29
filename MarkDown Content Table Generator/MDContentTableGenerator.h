@@ -17,6 +17,7 @@ public:
 
 private:
 	int startWithHeaderLevel;
+	bool firstLine;
 	std::ifstream* file;
 	std::string generated;
 	std::unordered_map<std::string, int> idTable;

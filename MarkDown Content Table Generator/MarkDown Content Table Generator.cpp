@@ -9,7 +9,7 @@
 #include "MDContentTableGenerator.h"
 using namespace std;
 
-const char* APP_VERSION = "v0.1.211229";
+const char* APP_VERSION = "v0.1.211229b";
 
 int main(int argc, char** argv) {
 	InputHandler::setVersionName(APP_VERSION);

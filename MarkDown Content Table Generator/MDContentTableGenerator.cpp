@@ -1,6 +1,6 @@
 #include "MDContentTableGenerator.h"
 
-MDContentTableGenerator::MDContentTableGenerator() : startWithHeaderLevel(1), file(nullptr), generated("") {}
+MDContentTableGenerator::MDContentTableGenerator() : startWithHeaderLevel(1), file(nullptr), generated(""), firstLine(true) {}
 
 MDContentTableGenerator::MDContentTableGenerator(std::string filename) : MDContentTableGenerator() {
 	openFile(filename);
@@ -26,6 +26,7 @@ void MDContentTableGenerator::setHeaderLevelStart(int startWithHeaderLevel) {
 std::string MDContentTableGenerator::generate() {
 	if (file == nullptr) return "";
 	std::string line;
+	firstLine = true;
 	while (std::getline(*file, line)) {
 		generated += generateLine(line);
 	}
@@ -59,7 +60,8 @@ std::string MDContentTableGenerator::generateLine(std::string line) {
 	// generate table row
 	std::string generatedLine = "";
 
-	// handle indentation and bullet list
+	// handle indentation, newline, and bullet list
+	if (!firstLine && startWithHeaderLevel == headerLevel) generatedLine += "\n";
 	for (int i = startWithHeaderLevel; i < headerLevel; i++)
 		generatedLine += "  ";
 	if (startWithHeaderLevel != headerLevel) generatedLine += "- ";
@@ -87,6 +89,7 @@ std::string MDContentTableGenerator::generateLine(std::string line) {
 	}
 
 	// done
+	firstLine = false;
 	return generatedLine + ")\n";
 }
 

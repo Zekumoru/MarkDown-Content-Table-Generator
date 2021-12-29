@@ -100,3 +100,10 @@ Inside the output file
 ```
 
 Notice that the header levels less than 2 are ignored.
+
+## Logs
+### version 0.1.211229b
+- Fixed headers without bullets bug
+
+### version 0.1.211229
+- Initial release
