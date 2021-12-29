@@ -1,7 +1,9 @@
 #include "InputHandler.h"
 
+std::string InputHandler::versionName = "";
+
 const char* InputHandler::HELP_DOC =
-    "MarkDown Table of Contents Generator (by ZekumoruDGH) - Help Section\n"
+    "MarkDown Table of Contents Generator Help Section\n"
 	"-h --help  \t opens this help section\n"
 	"<filename> \t provide file by filename\n"
 	"\n"
@@ -12,9 +14,14 @@ const char* InputHandler::HELP_DOC =
 	"Example: Providing 3 will ignore header level 1 and 2, in other words,\n"
 	"         headers that start with '#' and '##'\n";
 
+void InputHandler::setVersionName(const char* _versionName) {
+	versionName = _versionName;	
+}
+
 int InputHandler::handleCommandLineArgs(int argc, char** argv) {
 	if (argc == 1) {
-		std::cout << "Please specify a file. Type -h or --help to see available commands." << std::endl;
+		std::cout << "Type -h or --help to see available commands." << std::endl;
+		std::cout << "MarkDown Table of Contents Generator by Zekumoru (" << versionName << ")" << std::endl;
 		return -1;
 	}
 

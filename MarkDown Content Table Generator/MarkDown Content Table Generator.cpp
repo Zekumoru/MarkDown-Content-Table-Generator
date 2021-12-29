@@ -7,9 +7,12 @@
 #include <cstdlib>
 #include "InputHandler.h"
 #include "MDContentTableGenerator.h"
-using namespace std; 
+using namespace std;
+
+const char* APP_VERSION = "v0.1.211229";
 
 int main(int argc, char** argv) {
+	InputHandler::setVersionName(APP_VERSION);
 	if (InputHandler::handleCommandLineArgs(argc, argv) == -1) return 0;
 
 	string filename = argv[1];
