@@ -11,13 +11,12 @@ public:
 
 	void openFile(std::string);
 	void setHeaderLevelStart(int);
-	std::string generate();
+	int generate();
 
 	void saveGeneratedToFile(std::string);
 
 private:
 	int startWithHeaderLevel;
-	bool firstLine;
 	std::ifstream* file;
 	std::string generated;
 	std::unordered_map<std::string, int> idTable;

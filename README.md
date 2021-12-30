@@ -3,7 +3,7 @@
 Suppliying a .md file to this program generates another .md file which contains the table of contents of the specified .md file. It generates the table of contents using headers (h1-h6, or in markdown, # to ######)
 
 Made by Zekumoru.\
-Latest version: 0.1.211229
+Latest version: 0.2.211230
 
 ## Usage
 ### Opening the help section
@@ -102,6 +102,9 @@ Inside the output file
 Notice that the header levels less than 2 are ignored.
 
 ## Logs
+### version 0.2.211230
+- Fixed fatal bug: generates output file even if file does not exists
+
 ### version 0.1.211229b
 - Fixed headers without bullets bug
 

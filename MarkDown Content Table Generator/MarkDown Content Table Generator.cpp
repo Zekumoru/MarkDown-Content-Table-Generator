@@ -9,7 +9,7 @@
 #include "MDContentTableGenerator.h"
 using namespace std;
 
-const char* APP_VERSION = "v0.1.211229b";
+const char* APP_VERSION = "v0.2.211230";
 
 int main(int argc, char** argv) {
 	InputHandler::setVersionName(APP_VERSION);
@@ -22,9 +22,14 @@ int main(int argc, char** argv) {
 	if (argc > 2) generator->setHeaderLevelStart(atoi(argv[2]));
 
 	//// NOTE: Don't forget to call generate()
-	generator->generate();
+	if (generator->generate() != 0) {
+		cout << "Cannot open file: " << filename << ". Please make sure " <<
+			"that the file exists." << endl;
+		return 0;
+	}
+	
 	generator->saveGeneratedToFile(outputFileName);
 	cout << outputFileName << " has been generated successfully!" << endl;
-
+	
 	return 0;
 }
