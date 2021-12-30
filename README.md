@@ -77,7 +77,9 @@ Inside the output file
     - [Header Lv3](#header-lv3-1)
   - [Header Lv2 - Another one](#header-lv2---another-one)
     - [Header lv3 inside the other header 2](#header-lv3-inside-the-other-header-2)
+
 [Another Major Header](#another-major-header)
+
 ```
 
 > Notice that the default header level is 1.\
@@ -95,8 +97,10 @@ Inside the output file
 [Header Lv2 - Hello!](#header-lv2---hello)
   - [Header Lv3](#header-lv3)
   - [Header Lv3](#header-lv3-1)
+
 [Header Lv2 - Another one](#header-lv2---another-one)
   - [Header lv3 inside the other header 2](#header-lv3-inside-the-other-header-2)
+
 ```
 
 Notice that the header levels less than 2 are ignored.
