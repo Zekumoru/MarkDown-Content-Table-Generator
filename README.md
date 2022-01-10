@@ -5,6 +5,30 @@ Suppliying a .md file to this program generates another .md file which contains 
 Made by Zekumoru.\
 Latest version: 0.2.211230
 
+## Contents
+[Usage](#usage)
+  - [Opening the help section](#opening-the-help-section)
+  - [Generate using file](#generate-using-file)
+  - [Generate using file and header level](#generate-using-file-and-header-level)
+
+[Example](#example)
+
+[Header Lv2 - Hello!](#header-lv2---hello)
+  - [Header Lv3](#header-lv3)
+  - [Header Lv3](#header-lv3-1)
+
+[Header Lv2 - Another one](#header-lv2---another-one)
+  - [Header lv3 inside the other header 2](#header-lv3-inside-the-other-header-2)
+  - [Generating the table providing only the file](#generating-the-table-providing-only-the-file)
+  - [Generating the table providing the file and a header level](#generating-the-table-providing-the-file-and-a-header-level)
+
+[Logs](#logs)
+  - [version 0.2.211230](#version-02211230)
+  - [version 0.1.211229b](#version-01211229b)
+  - [version 0.1.211229](#version-01211229)
+
+> **Fun fact:** This table of contents is created by the program itself!
+
 ## Usage
 ### Opening the help section
 ```
@@ -43,25 +67,35 @@ Let's say it has the file name `test.md`.
 
 ```
 # Header Lv1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis pretium feugiat. Suspendisse porttitor mauris non libero rutrum, ac suscipit mauris rhoncus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nunc sagittis pretium feugiat. Suspendisse porttitor mauris non
+libero rutrum, ac suscipit mauris rhoncus.
 
 ## Header Lv2 - Hello!
-Fusce sem urna, semper sit amet consequat nec, suscipit rutrum odio.
+Fusce sem urna, semper sit amet consequat nec,
+suscipit rutrum odio.
 
 ### Header Lv3
-Phasellus rutrum arcu vitae felis maximus bibendum. Quisque semper accumsan tellus. Proin pulvinar ex nisl, a feugiat erat feugiat et.
+Phasellus rutrum arcu vitae felis maximus bibendum.
+Quisque semper accumsan tellus. Proin pulvinar ex nisl,
+a feugiat erat feugiat et.
 
 ### Header Lv3
-Etiam interdum accumsan placerat. Donec et nisl tincidunt, ornare mauris et, malesuada odio.
+Etiam interdum accumsan placerat. Donec et nisl tincidunt,
+ornare mauris et, malesuada odio.
 
 ## Header Lv2 - Another one
-Aenean egestas suscipit magna. Donec blandit eu diam sed pellentesque. Duis efficitur, risus at sodales luctus, tortor ligula dignissim augue, in laoreet libero nibh ac lorem.
+Aenean egestas suscipit magna. Donec blandit eu diam sed
+pellentesque. Duis efficitur, risus at sodales luctus, tortor
+ligula dignissim augue, in laoreet libero nibh ac lorem.
 
 ### Header lv3 inside the other header 2
 Vivamus ut turpis blandit sapien faucibus hendrerit.
 
 # Another Major Header
-Donec pulvinar volutpat velit quis imperdiet. Quisque et est nec purus bibendum eleifend sed ac tellus. Phasellus porta scelerisque mauris ac pulvinar.
+Donec pulvinar volutpat velit quis imperdiet. Quisque et
+est nec purus bibendum eleifend sed ac tellus. Phasellus
+porta scelerisque mauris ac pulvinar.
 ```
 
 ### Generating the table providing only the file
